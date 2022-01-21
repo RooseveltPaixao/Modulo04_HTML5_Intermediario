@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+</head>
+<body>
+    <h1>HTML5</h1>
+    <p>
+        O HTML5 trouxe diversas novas funcionalidades, TAGS novas e é preciso ficar atendo sobre quais browsers conseguem ou não entender essas novas funções, para isso acesse o site a baixo:
+    </p>
+    <a href="https://caniuse.com/?search=html5">Link</a><br><br><br>
+    OBS.: A maioria entende muito bem as TAGS novas, mas sempre teste antes e verifique no site;
+    <br><br><br><br><br><br><hr>
+
+    <!--
+        Agora vamos aprender os novos input do HTML 5
+        
+        input type: color - abre uma caixa de cores e envia o hexademal desse navegador;
+        
+        input type: date - abre uma caixa que abre um calendário onde posso escolher a data que quero;
+        
+        input type: datetime-local - além do dia pode-se selecionar a hora os minutos, etc;
+            OBS.: esse campo date funciona no IOS;
+        
+        input type:file - possibilita a escolha de um arquivo;
+            OBS.: Arquivos só são enviados com o POST o GET não funciona;
+
+        input type:number - cria um campo que só posso acresentar números;
+        
+        input type:range - cria uma barra que funciona em um intervalo;
+        
+        input type:tel - aparentemente não é diferente de nenhum outro, porque o foco desse é usuários de celular, pois só vai abrir o teclado numerico, assim restringe o que deve ser digitado;
+
+        input type:email - vai criar um campo pro e-mail e vai exibir mensagens caso o e-mail esteja digitado de maneira errada
+
+    -->
+    <h2>Input HTML 5</h2>
+    <form action="" method="get">
+        
+        <input type="color" name="cor"><br>
+        <!-- Essa TAG, por exemplo, não funciona no IOS e na verdade abre uma caixa de texo qualquer-->
+        <input type="submit" value="Enviar"><br><br>
+        
+        <input type="date" name="data" max="2025-12-31" min="1990-01-01"><br>
+        <input type="submit" value="Enviar"><br><br>
+        <!-- Esse max e min é a data mínima e maxíma que vai-->
+
+        <input type="datetime-local" name="dataehora"><br>
+        <input type="submit" value="Enviar"><br><br>
+        
+        <input type="file" name="arquivo"><br>
+        <input type="submit" value="Enviar"><br><br>
+        
+        <input type="number" name="numeros" max="10" min="0" ><br>
+        <input type="submit" value="Enviar"><br><br>
+          <!-- Esse max e min é a numero mínima e maxíma que vai. Caso digitado valores fora esses vai aparecer uma mensagem dizendo o intervalo certo-->
+
+
+        <input type="range" name="intervalo" min="0" max="10" value="0"><br>
+        <input type="submit" value="Enviar"><br><br>
+        <!--Esse value="0" é o incio do intervalo-->
+
+        <input type="tel" name="telefone"><br>
+        <input type="submit" value="Enviar"><br><br>
+
+        <input type="email" name="e-mail"><br>
+        <input type="submit" value="Enviar"><br><br>
+    </form>
+    <br><br><br><br><br><br><hr>
+    <h2>TAG's Semânticas</h2>
+    <p>
+        <b>TAG's Semânticas são tags que o buscador do google consegui entender e é importante pra funcionar melhor no algoritimo de busca do google.</b> <br>
+        Algumas TAG's semanticas foram incluidas no novo HTML5 como a TAG header (cabeçalho); antes de ter essa tag era comum usar a tag DIV (inclusive é só assim que eu sei). <br>
+        Vamos as TAG's: <br><br>
+        TAG - HEARD - essa tag funciona exatamente igual a tag div, mas é semântica; <br>
+        TAG - NAV - essa tag é melhor pro google entender que é uma navegação, ou seja, ao invês de usar uma div dentro de outra pra criar um cabeçalho é melhor substituir a segunda div por nav; <br>
+        Abaixo mostramos isso em código<br>
+        Ao inves de usar assim: <br>
+
+        <img src="./imagens/exemplo de cabeçalho01.png" alt=""> <br> <br>
+
+        Use assim: <br>
+
+        <img src="./imagens/exemplo de cabeçalho02.png" alt="">
+
+        <br><br>
+        TAG - FOOTER - essa TAG é para rodapé; <br>
+        TAG - MAIN - essa TAG só pode ser usada UMA vez no seu código e ela identifica o contéudo principal dentrro dela teremos outras TAG's importantes como:
+        <div style="padding-left: 25px;margin: 0;">
+            TAG - SELECTION e ARTICLE - a tag selection separa as coisas em seções como no <a href="https://www.globo.com/">site da Globo</a> e cada uma dessas seções tem um artigo que nos leva a outra TAG importante a article deve ser usada quando o contéudo dentro dele faça sentindo INDEPENDENTE da página como o <a href="https://ge.globo.com/futebol/futebol-internacional/noticia/justica-italiana-confirma-condenacao-de-robinho-por-violencia-sexual.ghtml">artigo da Globo.</a>
+            <div style="padding-left:25px;">
+                OBS.: É importante dizer que NÃO EXISTE uma regra entre qual vai estar dentro de quem; a selection e article funcionam em conjunto e NÃO exite uma hierarquia.
+            </div>
+        </div>
+        
+    </p>
+
+    <header class="header">
+        <h3>LOGO</h3>
+        <nav class="nav">
+            <ul class="menu">
+                
+            </ul>
+
+        </nav>
+    </header>
+
+
+
+</body>
+</html>

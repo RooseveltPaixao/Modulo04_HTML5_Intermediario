@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <p>
+        O formulário é o cara que faz a integração/conexão do front-end com o back-ed;<br>
+        ele vai pegar os dados cadastrados (no frond-end) e enviar pro servidor (back-edn)<br>
+        ai o servidor vai usar linguagem de propragamação e trabalhar com esses dados.<Br>
+        
+
+        Por enquanto vamos trabalhar só com o frond-end, como se a programção já estivesse pronta<br>
+        Pra fazer cadastro de e-mails por exemplo dá pra usar um serviço chamado.... e esse serviço <br>
+        tem toda a lógica de propragamação necessária pra enviar e-mails em massa.
+
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <hr>
+
+    <!-- Criando um formulário:
+    P/ criar um formulário vamos usar a Tag <form></form> e tudo que estiver dentro desse campo vai ser enviado pro Back-end;
+    Pra enviar precisamos definir o método de envio pelo atributo method="POST ou GET" ->
+    POST - envia o formulário sem identificar os dados apresentado -muito usado pra login;
+    Get - envia o formulário mostrando os dados - usado pra tudo que não precisa de confidencialidade;
+        OBS.: o meu BACK-END só vai entender os dados enviados se eu disser corretamente se é GET ou POST;
+    Também é preciso dizer qual a action="endereço do ENDPOINT" é pra onde vai enviar os dados coletados.
+        Esse endereço pode estar em um site //https ou dentro do meu proprio site ai vou indicar o caminho pra chegar nele ./ehAquiQueVaiRodaroBackEnd. Ou seja, mesmo dominio - só o caminho final, se for em outro precisa colcoar o endereço completo.
+
+    Agora precisamos coloar um campo - inicamos isso com <input type="tipo de arquivo(texto,envio,etc") name="nome do campo(e-mail, nome, etc)">
+
+    -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="get" action="//https">
+        <input type="text" name="e-Mail">
+        <input type="text" name="nome">
+
+        <input type="submit"> <!-- Esse é um campo pra envio e NÃO precisa de nome -->
+
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+<!--    
+    Vamos analaisar esse link do YouTube
+ https://www.youtube.com/watch?v=F9cqmMhVb24
+ 
+ O https://www.youtube.com/watch é o endereço onde está localizado nosso back-end - nossa ACTION;
+ 
+ O "v" é o nome do formulário - nosso NAME;
+ 
+ E o F9cqmMhVb24 é o código do vídeo que o back-end comprrende, ou seja, ao enviar esse código pro back-end ele te devolve o vídeo.
+
+-->
+
+    <p> Agora vamos abrir um víde na internet. Coloque no campo abaixo esse dado: <b>F9cqmMhVb24</b>
+        e envie (submit).</p>
+   
+
+    <form action="https://www.youtube.com/watch" method="get">
+        <input type="text" name="v">
+        <input type="submit">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--    
+    Vamos criar um formulário de busca de vídeo no YT.
+    1º passo é ir no youtube e pesquisar alguma coisa pra gente analisar o link
+    https://www.youtube.com/results?search_query=peido+fedido;
+
+    o https://www.youtube.com/results é o endereço onde está localizado nosso back-end - nossa ACTION;
+    
+    O "search_query" é o nome do formulário -nosso NAME;
+    
+    E o peido+fedido é o código do vídeo que o back-end comprende, ou seja, ao enviar esse código pro back-end ele te devolve o vídeo. Notem que pode ser qualquer nome, o algoritimo deles vai interpretar esse nome e gerar um resultado.
+
+-->
+<p> Agora vamos criar um formulário de pesquisa pro YouTube. Coloque no campo de busca o que deseja procurar no YouTube</p>
+
+
+<form action="https://www.youtube.com/results" method="get">
+    <input type="text" name="search_query">
+    <input type="submit">
+</form>
+<br>
+    <br>
+    <br>
+    <br>
+    <!--    
+    Vamos ver os type de formulários, até agora vimos o text e o sumit, mas existe mais.
+    1º password - é um formulário pra senha;
+        OBS.: Esse formulário só tem sentindo usando method POST; aqui o get é só de exemplo irreal.
+    
+    
+    2º checkbox - é um formulário em caixinha que se pode marcar;
+
+    3º radio - é um formulário estilo check box só que redondinho e só se pode marcar um ou outro
+
+    OBS.: Caso eu queira que algum dos meus bichinhos já apareça selecionado eu uso o atributo checked;
+    OBS.: Usando o value  em botões que não são de selecionar eu consigo adicionar um nome diferente pra eles; isso é mais interessante e botões que não precisam de name.
+
+    4º reset - limpa os campos e NÃO precisa de um name.
+
+
+
+-->
+<form action="https://www.youtube.com/results" method="get">
+    <input type="text" name="e-mail" value="e-Mail"><br>
+    <input type="text" name="Nome"><br>
+    <input type="password" name="senha"><br>
+    <input type="checkbox" name="curso" value="op01" checked>Python<br>
+    <input type="checkbox" name="curo" value="op02">PHP<br>
+     <!-- Esse value no checkbox é pro back-end diferenciar qual é qual-->
+    <input type="radio" name="sex" value="m">masc<br>
+    <input type="radio" name="sex" value="m">fem<br>
+     <!-- No radio é importante terem o mesmo name, se não ele não fica alternativo (podendo marca ou um outro e não os dois ao mesmo tempo) -->
+     <input type="reset" value="Limpar">
+    <input type="submit" value="Enviar">
+</form>
+<br>
+    <br>
+    <br>
+    <!--   
+        Vamos ver outras TAGS do formulário 
+        TAG Select - cria um campo de seleção onde temos as options e ao selecionar uma option o value é enviado ao back-end;
+        outra TAG importante é o textarea que cria uma caixa pro usuário escrever um texto e enviar. É legal pra feedback.
+-->
+<form action="" method="get">
+    <select name="estados" size="5" multiple>
+         <!-- Usando o atributo sinze a visualização fica restrita a 5 opções e pra ver as outras opções precisa rolar o scroll. Esse size só aceita numeros. Porém fica estranho, parece uma caixa de rolagem e não uma caixa de seleção-->
+        <!-- Já o Multiple faz com que eu possa selecionar várias opções-->
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="GO" selected>Goiás</option>
+        <!-- Usando o atributo selected a opção de Goiás vai ser sempre a primeira, mas isso não impede de selecionar outras opções-->
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="PR">Parana</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="ES">Espirito Santos</option>
+        <option value="SC">Santa Catarina</option>
+    </select>
+    <input type="submit" value="Enviar">
+</form><br><br><br>
+<form action="" method="get">
+    Assunto:<input type="text" name="reclamações"><br>
+    <textarea name="mensagem" id="" cols="30" rows="10"></textarea><br>
+    <input type="submit" value="enviar">
+
+
+
+    <br><br><br>
+</form>
+
+
+
+
+</body>
+</html>
